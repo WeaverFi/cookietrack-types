@@ -1,0 +1,26 @@
+{
+    "name": "cookietrack-types",
+    "version": "1.0.0",
+    "description": "Common Typings for CookieTrack and the public API",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "tsc",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/midpoint68/cookietrack-types.git"
+    },
+    "keywords": [
+        "CookieTrack",
+        "Types",
+        "TypeScript"
+    ],
+    "author": "NCookiez and Trevor Richard",
+    "license": "MIT",
+    "types": "./dist/index.d.ts",
+    "bugs": {
+        "url": "https://github.com/midpoint68/cookietrack-types/issues"
+    },
+    "homepage": "https://github.com/midpoint68/cookietrack-types#readme"
+}

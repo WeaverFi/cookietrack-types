@@ -54,7 +54,7 @@ export interface LPToken extends OwnedToken {
 }
 
 // Debt Token Interface:
-export interface DebtToken extends OwnedToken {
+export interface DebtToken extends OwnedToken, PricedToken {
     type: 'debt'
 }
 

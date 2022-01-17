@@ -38,7 +38,7 @@ export interface LPToken extends OwnedToken {
     token0: UnderlyingToken;
     token1: UnderlyingToken;
 }
-export interface DebtToken extends OwnedToken {
+export interface DebtToken extends OwnedToken, PricedToken {
     type: 'debt';
 }
 export declare function isLPToken(token: OwnedToken): token is LPToken;

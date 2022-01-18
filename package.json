@@ -1,6 +1,6 @@
 {
-    "name": "cookietrack-types",
-    "version": "1.0.1",
+    "name": "@CookieTrack-io/cookietrack-types",
+    "version": "1.0.2",
     "description": "Common Typings for CookieTrack and the public API",
     "main": "dist/index.js",
     "scripts": {
@@ -9,7 +9,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/midpoint68/cookietrack-types.git"
+        "url": "git+https://github.com/CookieTrack-io/cookietrack-types"
     },
     "keywords": [
         "CookieTrack",
@@ -20,7 +20,7 @@
     "license": "MIT",
     "types": "./dist/index.d.ts",
     "bugs": {
-        "url": "https://github.com/midpoint68/cookietrack-types/issues"
+        "url": "https://github.com/CookieTrack-io/cookietrack-types/issues"
     },
-    "homepage": "https://github.com/midpoint68/cookietrack-types#readme"
+    "homepage": "https://github.com/CookieTrack-io/cookietrack-types#readme"
 }

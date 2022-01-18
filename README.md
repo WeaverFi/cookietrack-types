@@ -2,7 +2,7 @@
 Common Typings for CookieTrack and the public API
 
 ## Install
-npm i @cookietrack-io/cookietrack-types
+npm i cookietrack-types
 
 ## Build
 npm run build

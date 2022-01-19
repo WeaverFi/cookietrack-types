@@ -1,11 +1,15 @@
+![CookieTrack Logo][logo]
 # CookieTrack Types
-Common Typings for CookieTrack and the public API
 
-## Install
-npm i cookietrack-types
+Common Typings for CookieTrack.
 
-## Build
+## Installing
+`npm i cookietrack-types`
+
+## Building & Publishing
+```
 npm run build
+npm run publish
+```
 
-## Publish
-npm publish
+[logo]: https://github.com/Ncookiez/cookietrack-api/blob/master/favicon.svg "CookieTrack"

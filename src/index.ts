@@ -83,14 +83,12 @@ export interface DetailedTX extends SimpleTX {
 }
 export interface ApprovalTX extends DetailedTX {
     type: 'approve' | 'revoke'
-    nativeToken: string
 }
 export interface TransferTX extends DetailedTX {
     type: 'transfer'
     from: Address
     to: Address
     value: number
-    nativeToken: string
 }
 export interface TaxApprovalTX extends ApprovalTX {
     token: TaxTXToken

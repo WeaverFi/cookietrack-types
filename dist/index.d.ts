@@ -56,18 +56,17 @@ export interface SimpleTX {
 }
 export interface DetailedTX extends SimpleTX {
     type: TXType;
+    token: TXToken;
     nativeToken: string;
 }
 export interface ApprovalTX extends DetailedTX {
     type: 'approve' | 'revoke';
-    token: TXToken;
     nativeToken: string;
 }
 export interface TransferTX extends DetailedTX {
     type: 'transfer';
     from: Address;
     to: Address;
-    token: TXToken;
     value: number;
     nativeToken: string;
 }

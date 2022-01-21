@@ -9,7 +9,7 @@
 
 // Basic Types:
 export type Chain = 'eth' | 'bsc' | 'poly' | 'ftm' | 'avax' | 'one' | 'sol' | 'terra';
-export type ChainID = 1 | 56 | 137 | 250 | 43114 | 1666600000; 
+export type ChainID = 1 | 56 | 137 | 250 | 43114 | 1666600000;
 export type URL = `https://${string}`;
 export type Address = `0x${string}`;
 export type SolAddress = string;
@@ -78,18 +78,17 @@ export interface SimpleTX {
 }
 export interface DetailedTX extends SimpleTX {
     type: TXType
+    token: TXToken
     nativeToken: string
 }
 export interface ApprovalTX extends DetailedTX {
     type: 'approve' | 'revoke'
-    token: TXToken
     nativeToken: string
 }
 export interface TransferTX extends DetailedTX {
     type: 'transfer'
     from: Address
     to: Address
-    token: TXToken
     value: number
     nativeToken: string
 }

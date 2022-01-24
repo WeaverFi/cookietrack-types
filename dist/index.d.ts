@@ -13,6 +13,7 @@ export declare type TerraAddress = `terra1${string}`;
 export declare type TokenType = 'nativeToken' | 'token' | 'lpToken' | 'debt';
 export declare type TXType = 'transfer' | 'approve' | 'revoke';
 export declare type Hash = `0x${string}`;
+export declare const ChainEndpoint: Record<Chain, string>;
 export interface BaseToken {
     symbol: string;
     address: Address | SolAddress;

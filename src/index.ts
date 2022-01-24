@@ -17,6 +17,16 @@ export type TerraAddress = `terra1${string}`;
 export type TokenType = 'nativeToken' | 'token' | 'lpToken' | 'debt';
 export type TXType = 'transfer' | 'approve' | 'revoke';
 export type Hash = `0x${string}`;
+export const ChainEndpoint: Record<Chain, string> = {
+    eth: "ethereum",
+    bsc: "bsc",
+    poly: "polygon",
+    ftm: "fantom",
+    avax: "avalanche",
+    one: "harmony",
+    sol: "solana",
+    terra: "terra"
+};
 
 /* ========================================================================================================================================================================= */
 

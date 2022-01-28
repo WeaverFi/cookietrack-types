@@ -132,14 +132,18 @@ export function isTransferTX(tx: DetailedTX): tx is TransferTX {
 // ABI Interfaces:
 export interface ABI {
     constant: true
-    inputs: ABIIO[]
+    inputs: (ABIIO | ABITupleIO)[]
     name: string
-    outputs: ABIIO[]
+    outputs: (ABIIO | ABITupleIO)[]
     type: 'function'
 }
 export interface ABIIO {
     name: string
     type: string
+}
+export interface ABITupleIO {
+    type: 'tuple[]',
+    components: ABIIO[]
 }
 
 /* ========================================================================================================================================================================= */

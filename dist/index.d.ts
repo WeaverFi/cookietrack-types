@@ -89,14 +89,18 @@ export declare function isApprovalTX(tx: DetailedTX): tx is ApprovalTX;
 export declare function isTransferTX(tx: DetailedTX): tx is TransferTX;
 export interface ABI {
     constant: true;
-    inputs: ABIIO[];
+    inputs: (ABIIO | ABITupleIO)[];
     name: string;
-    outputs: ABIIO[];
+    outputs: (ABIIO | ABITupleIO)[];
     type: 'function';
 }
 export interface ABIIO {
     name: string;
     type: string;
+}
+export interface ABITupleIO {
+    type: 'tuple[]';
+    components: ABIIO[];
 }
 export interface ChainData {
     id: ChainID;

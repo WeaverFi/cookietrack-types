@@ -163,13 +163,31 @@ export interface ChainData {
 /* ========================================================================================================================================================================= */
 
 // Chain Token Data Interface:
-export interface ChainTokenData {
-    tokens: TokenData[]
+export interface BaseChainTokenData {
     logos: LogoData[]
-    blacklist: string[]
+}
+export interface ChainTokenData extends BaseChainTokenData {
+    tokens: TokenData[]
+    blacklist: Address[]
+}
+export interface SolChainTokenData extends BaseChainTokenData {
+    tokens: SolTokenData[]
+    blacklist: SolAddress[]
+}
+export interface TerraChainTokenData extends BaseChainTokenData {
+    tokens: TerraTokenData[]
+    blacklist: TerraAddress[]
 }
 export interface TokenData {
-    address: string
+    address: Address
+    symbol: string
+}
+export interface SolTokenData {
+    address: SolAddress
+    symbol: string
+}
+export interface TerraTokenData {
+    address: TerraAddress
     symbol: string
 }
 export interface LogoData {

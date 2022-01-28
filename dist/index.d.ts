@@ -115,10 +115,10 @@ export interface ChainData {
 export interface ChainTokenData {
     tokens: TokenData[];
     logos: LogoData[];
-    blacklist: (Address | SolAddress | TerraAddress)[];
+    blacklist: string[];
 }
 export interface TokenData {
-    address: Address | SolAddress | TerraAddress;
+    address: string;
     symbol: string;
 }
 export interface LogoData {

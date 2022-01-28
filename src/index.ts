@@ -142,7 +142,7 @@ export interface ABIIO {
     type: string
 }
 export interface ABITupleIO {
-    type: 'tuple[]',
+    type: 'tuple[]'
     components: ABIIO[]
 }
 
@@ -158,6 +158,23 @@ export interface ChainData {
     usdcDecimals: number
     inch: boolean
     paraswap: boolean
+}
+
+/* ========================================================================================================================================================================= */
+
+// Chain Token Data Interface:
+export interface ChainTokenData {
+    tokens: TokenData[]
+    logos: LogoData[]
+    blacklist: (Address | SolAddress | TerraAddress)[]
+}
+export interface TokenData {
+    address: Address | SolAddress | TerraAddress
+    symbol: string
+}
+export interface LogoData {
+    symbol: string
+    logo: URL
 }
 
 /* ========================================================================================================================================================================= */

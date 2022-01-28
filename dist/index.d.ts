@@ -112,6 +112,19 @@ export interface ChainData {
     inch: boolean;
     paraswap: boolean;
 }
+export interface ChainTokenData {
+    tokens: TokenData[];
+    logos: LogoData[];
+    blacklist: (Address | SolAddress | TerraAddress)[];
+}
+export interface TokenData {
+    address: Address | SolAddress | TerraAddress;
+    symbol: string;
+}
+export interface LogoData {
+    symbol: string;
+    logo: URL;
+}
 export interface APIResponse {
     status: 'ok' | 'error';
     data: any[];

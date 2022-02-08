@@ -15,6 +15,7 @@ export type Address = `0x${string}`;
 export type SolAddress = string;
 export type TerraAddress = `terra1${string}`;
 export type TokenType = 'nativeToken' | 'token' | 'lpToken' | 'debt' | 'xToken';
+export type TokenStatus = 'none' | 'staked' | 'liquidity' | 'lent' | 'borrowed' | 'unclaimed';
 export type TXType = 'transfer' | 'approve' | 'revoke';
 export type Hash = `0x${string}`;
 
@@ -46,6 +47,7 @@ export interface OwnedToken extends BaseToken {
     type: TokenType
     chain: Chain
     location: string
+    status: TokenStatus
     owner: Address | SolAddress
 }
 export interface NativeToken extends OwnedToken, PricedToken {
@@ -63,7 +65,7 @@ export interface DebtToken extends OwnedToken, PricedToken {
     type: 'debt'
 }
 export interface XToken extends OwnedToken {
-    type: 'xToken',
+    type: 'xToken'
     logo: URL
     underlyingToken: PricedToken
 }

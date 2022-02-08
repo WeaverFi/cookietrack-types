@@ -11,6 +11,7 @@ export declare type Address = `0x${string}`;
 export declare type SolAddress = string;
 export declare type TerraAddress = `terra1${string}`;
 export declare type TokenType = 'nativeToken' | 'token' | 'lpToken' | 'debt' | 'xToken';
+export declare type TokenStatus = 'none' | 'staked' | 'liquidity' | 'lent' | 'borrowed' | 'unclaimed';
 export declare type TXType = 'transfer' | 'approve' | 'revoke';
 export declare type Hash = `0x${string}`;
 export declare const ChainEndpoint: Record<Chain, string>;
@@ -27,6 +28,7 @@ export interface OwnedToken extends BaseToken {
     type: TokenType;
     chain: Chain;
     location: string;
+    status: TokenStatus;
     owner: Address | SolAddress;
 }
 export interface NativeToken extends OwnedToken, PricedToken {

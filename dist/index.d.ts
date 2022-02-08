@@ -10,7 +10,7 @@ export declare type URL = `https://${string}`;
 export declare type Address = `0x${string}`;
 export declare type SolAddress = string;
 export declare type TerraAddress = `terra1${string}`;
-export declare type TokenType = 'nativeToken' | 'token' | 'lpToken' | 'debt';
+export declare type TokenType = 'nativeToken' | 'token' | 'lpToken' | 'debt' | 'xToken';
 export declare type TXType = 'transfer' | 'approve' | 'revoke';
 export declare type Hash = `0x${string}`;
 export declare const ChainEndpoint: Record<Chain, string>;
@@ -43,10 +43,16 @@ export interface LPToken extends OwnedToken {
 export interface DebtToken extends OwnedToken, PricedToken {
     type: 'debt';
 }
+export interface XToken extends OwnedToken {
+    type: 'xToken';
+    logo: URL;
+    underlyingToken: PricedToken;
+}
 export declare function isNativeToken(token: OwnedToken): token is NativeToken;
 export declare function isToken(token: OwnedToken): token is Token;
 export declare function isLPToken(token: OwnedToken): token is LPToken;
 export declare function isDebtToken(token: OwnedToken): token is DebtToken;
+export declare function isXToken(token: OwnedToken): token is XToken;
 export interface SimpleTX {
     wallet: Address;
     chain: Chain;

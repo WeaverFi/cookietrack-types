@@ -6,7 +6,7 @@
  * See LICENSE for more details
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.isTransferTX = exports.isApprovalTX = exports.isDebtToken = exports.isLPToken = exports.isToken = exports.isNativeToken = exports.ChainEndpoint = void 0;
+exports.isTransferTX = exports.isApprovalTX = exports.isXToken = exports.isDebtToken = exports.isLPToken = exports.isToken = exports.isNativeToken = exports.ChainEndpoint = void 0;
 exports.ChainEndpoint = {
     eth: "ethereum",
     bsc: "bsc",
@@ -33,6 +33,10 @@ function isDebtToken(token) {
     return token.type === 'debt';
 }
 exports.isDebtToken = isDebtToken;
+function isXToken(token) {
+    return token.type === 'xToken';
+}
+exports.isXToken = isXToken;
 function isApprovalTX(tx) {
     return (tx.type === 'approve' || tx.type === 'revoke');
 }

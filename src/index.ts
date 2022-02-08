@@ -14,7 +14,7 @@ export type URL = `https://${string}`;
 export type Address = `0x${string}`;
 export type SolAddress = string;
 export type TerraAddress = `terra1${string}`;
-export type TokenType = 'nativeToken' | 'token' | 'lpToken' | 'debt';
+export type TokenType = 'nativeToken' | 'token' | 'lpToken' | 'debt' | 'xToken';
 export type TXType = 'transfer' | 'approve' | 'revoke';
 export type Hash = `0x${string}`;
 
@@ -62,6 +62,11 @@ export interface LPToken extends OwnedToken {
 export interface DebtToken extends OwnedToken, PricedToken {
     type: 'debt'
 }
+export interface XToken extends OwnedToken {
+    type: 'xToken',
+    logo: URL
+    underlyingToken: PricedToken
+}
 
 // Token Type Guards:
 export function isNativeToken(token: OwnedToken): token is NativeToken {
@@ -75,6 +80,9 @@ export function isLPToken(token: OwnedToken): token is LPToken {
 }
 export function isDebtToken(token: OwnedToken): token is DebtToken {
     return token.type === 'debt';
+}
+export function isXToken(token: OwnedToken): token is XToken {
+    return token.type === 'xToken';
 }
 
 /* ========================================================================================================================================================================= */

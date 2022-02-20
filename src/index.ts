@@ -111,9 +111,10 @@ export interface TransferTX extends DetailedTX {
     from: Address
     to: Address
     value: number
+    contract: boolean
 }
 export interface TaxApprovalTX extends ApprovalTX {
-    token: TaxTXToken
+    token: TXToken
     nativeTokenPrice: number
 }
 export interface TaxTransferTX extends TransferTX {

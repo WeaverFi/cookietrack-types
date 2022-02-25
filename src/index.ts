@@ -165,6 +165,7 @@ export interface ChainData {
     token: string
     cgID: string
     nativeID: string
+    wrappedToken: Address
     usdc: Address
     usdcDecimals: number
     inch: boolean

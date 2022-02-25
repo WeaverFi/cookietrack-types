@@ -1,6 +1,6 @@
 {
     "name": "cookietrack-types",
-    "version": "1.5.3",
+    "version": "1.5.4",
     "description": "Common Typings for CookieTrack.",
     "main": "dist/index.js",
     "scripts": {

@@ -1,9 +1,10 @@
 {
     "name": "cookietrack-types",
-    "version": "1.5.4",
+    "version": "1.5.5",
     "description": "Common Typings for CookieTrack.",
     "main": "dist/index.js",
     "scripts": {
+        "publish": "npm run build && npm publish",
         "build": "tsc"
     },
     "repository": {

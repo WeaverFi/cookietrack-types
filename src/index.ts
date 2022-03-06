@@ -193,14 +193,20 @@ export interface TerraChainTokenData extends BaseChainTokenData {
 export interface TokenData {
     address: Address
     symbol: string
+    logo: URL
+    decimals: number
 }
 export interface SolTokenData {
     address: SolAddress
     symbol: string
+    logo: URL
+    decimals: number
 }
 export interface TerraTokenData {
     address: TerraAddress
     symbol: string
+    logo: URL
+    decimals: number
 }
 export interface LogoData {
     symbol: string

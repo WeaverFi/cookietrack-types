@@ -36,7 +36,7 @@ export const ChainEndpoint: Record<Chain, string> = {
 // Token Interfaces:
 export interface BaseToken {
     symbol: string
-    address: Address | SolAddress
+    address: Address | SolAddress | TerraAddress
     balance: number
 }
 export interface PricedToken extends BaseToken {
@@ -48,7 +48,7 @@ export interface OwnedToken extends BaseToken {
     chain: Chain
     location: string
     status: TokenStatus
-    owner: Address | SolAddress
+    owner: Address | SolAddress | TerraAddress
 }
 export interface NativeToken extends OwnedToken, PricedToken {
     type: 'nativeToken'

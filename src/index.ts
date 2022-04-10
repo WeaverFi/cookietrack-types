@@ -8,8 +8,8 @@
 /* ========================================================================================================================================================================= */
 
 // Basic Types:
-export type Chain = 'eth' | 'bsc' | 'poly' | 'ftm' | 'avax' | 'one' | 'sol' | 'terra';
-export type ChainID = 1 | 56 | 137 | 250 | 43114 | 1666600000;
+export type Chain = 'eth' | 'bsc' | 'poly' | 'ftm' | 'avax' | 'one' | 'cronos' | 'sol' | 'terra';
+export type ChainID = 1 | 56 | 137 | 250 | 43114 | 1666600000 | 25;
 export type URL = `https://${string}`;
 export type Address = `0x${string}`;
 export type SolAddress = string;
@@ -27,6 +27,7 @@ export const ChainEndpoint: Record<Chain, string> = {
     ftm: "fantom",
     avax: "avalanche",
     one: "harmony",
+    cronos: "cronos",
     sol: "solana",
     terra: "terra"
 };

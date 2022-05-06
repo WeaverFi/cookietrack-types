@@ -14,6 +14,7 @@ exports.ChainEndpoint = {
     ftm: "fantom",
     avax: "avalanche",
     one: "harmony",
+    cronos: "cronos",
     sol: "solana",
     terra: "terra"
 };

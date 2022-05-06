@@ -218,7 +218,7 @@ export interface LogoData {
 
 // API Response Interface:
 export interface APIResponse {
-    status: 'ok' | 'error'
+    status: 'ok' | 'error' | 'missingData'
     data: any[]
     request: string
 }

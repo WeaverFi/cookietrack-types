@@ -4,8 +4,8 @@
  * Copyright (c) 2022 Ncookie & Trevor Richard
  * See LICENSE for more details
  */
-export declare type Chain = 'eth' | 'bsc' | 'poly' | 'ftm' | 'avax' | 'one' | 'sol' | 'terra';
-export declare type ChainID = 1 | 56 | 137 | 250 | 43114 | 1666600000;
+export declare type Chain = 'eth' | 'bsc' | 'poly' | 'ftm' | 'avax' | 'one' | 'cronos' | 'sol' | 'terra';
+export declare type ChainID = 1 | 56 | 137 | 250 | 43114 | 1666600000 | 25;
 export declare type URL = `https://${string}`;
 export declare type Address = `0x${string}`;
 export declare type SolAddress = string;
@@ -160,7 +160,7 @@ export interface LogoData {
     logo: URL;
 }
 export interface APIResponse {
-    status: 'ok' | 'error';
+    status: 'ok' | 'error' | 'missingData';
     data: any[];
     request: string;
 }
